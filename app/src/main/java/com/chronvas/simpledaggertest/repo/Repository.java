@@ -36,7 +36,7 @@ public class Repository implements IRepository {
             Timber.e("context == null");
         if (apiSource == null) {
             Timber.e("apiSource == null");
-            return "Repo check, apisource == null";
+            return "Repo check, apisource == null ";
         } else {
             apiSource.callServer();
             return "User";
