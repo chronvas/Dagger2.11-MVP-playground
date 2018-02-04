@@ -3,8 +3,6 @@ package com.chronvas.simpledaggertest.repo;
 import com.chronvas.simpledaggertest.repo.api.ApiSource;
 import com.chronvas.simpledaggertest.repo.api.IApiSource;
 
-import javax.inject.Singleton;
-
 import dagger.Binds;
 import dagger.Module;
 

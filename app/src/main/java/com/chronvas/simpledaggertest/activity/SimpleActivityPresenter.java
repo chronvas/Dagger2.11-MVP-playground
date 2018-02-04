@@ -1,8 +1,8 @@
 package com.chronvas.simpledaggertest.activity;
 
 
-import com.chronvas.simpledaggertest.repo.IRepository;
 import com.chronvas.simpledaggertest.injection.ActivityScoped;
+import com.chronvas.simpledaggertest.repo.IRepository;
 
 import javax.inject.Inject;
 
@@ -20,15 +20,17 @@ public class SimpleActivityPresenter implements ISimpleActivityContract.Presente
     IRepository repository;
 
     @Inject
-    public SimpleActivityPresenter(ISimpleActivityContract.View view) {
+    public SimpleActivityPresenter(ISimpleActivityContract.View view, IRepository repository) {
+        this.repository = repository;
         Timber.d("Constructor");
         this.view = view;
-        if (repository == null)
-            Timber.e("repo: null");
+        if (view == null)
+            Timber.e("view: null");
     }
 
     @Override
     public void check() {
+        repository.getUser();
         view.showToast(hashCode());
     }
 }

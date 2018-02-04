@@ -2,7 +2,6 @@ package com.chronvas.simpledaggertest.repo;
 
 import android.content.Context;
 
-import com.chronvas.simpledaggertest.repo.api.ApiSource;
 import com.chronvas.simpledaggertest.repo.api.IApiSource;
 
 import javax.inject.Inject;

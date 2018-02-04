@@ -1,7 +1,5 @@
 package com.chronvas.simpledaggertest.utils;
 
-import javax.inject.Singleton;
-
 import dagger.Binds;
 import dagger.Module;
 
